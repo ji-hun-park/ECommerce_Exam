@@ -17,6 +17,7 @@ public class minigameUI : MonoBehaviour
         txt_list = GetComponentsInChildren<Text>();
         btn_list = GetComponentsInChildren<Button>();
         UpdateImages();
+        ButtonSet();
     }
 
     public void UpdateImages()
@@ -29,7 +30,10 @@ public class minigameUI : MonoBehaviour
         img_list[8].sprite = GameManager.Instance.spr_list[GameManager.Instance.rannum8[5]];
         img_list[9].sprite = GameManager.Instance.spr_list[GameManager.Instance.rannum8[6]];
         img_list[10].sprite = GameManager.Instance.spr_list[GameManager.Instance.rannum8[7]];
+    }
 
+    public void ButtonSet()
+    {
         btn_list[1].onClick.AddListener(() => OnClickImageButton(1));
         btn_list[2].onClick.AddListener(() => OnClickImageButton(2));
         btn_list[3].onClick.AddListener(() => OnClickImageButton(3));
@@ -45,6 +49,7 @@ public class minigameUI : MonoBehaviour
         // ?î¨?ù¥ Î°úÎìú?ê† ?ïå ?ò∏Ï∂?
         //SceneManager.sceneLoaded += OnSceneLoaded;
         UpdateImages();
+        ButtonSet();
     }
 
     private void OnDisable()
@@ -58,19 +63,12 @@ public class minigameUI : MonoBehaviour
         //this.gameObject.SetActive(true);
         this.enabled = true;
         UpdateImages();
+        ButtonSet();
     }
 
     public void OnClickImageButton(int num)
     {
-        /*btn_list[1].onClick.RemoveAllListeners();
-        btn_list[2].onClick.RemoveAllListeners();
-        btn_list[3].onClick.RemoveAllListeners();
-        btn_list[4].onClick.RemoveAllListeners();
-        btn_list[5].onClick.RemoveAllListeners();
-        btn_list[6].onClick.RemoveAllListeners();
-        btn_list[7].onClick.RemoveAllListeners();
-        btn_list[8].onClick.RemoveAllListeners();*/
-
         GameManager.Instance.IMGNUM = num;
+        GameManager.Instance.ui_list[3].gameObject.SetActive(true);
     }
 }

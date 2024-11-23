@@ -107,12 +107,16 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(WaitOneSecond());
         if (is_ingame == true)
         {
-            ui_list = new RectTransform[3];
+            ui_list = new RectTransform[5];
             ui_list[1] = GameObject.Find("MiniGameUI").GetComponent<RectTransform>();
             ui_list[2] = GameObject.Find("PauseMenuUI").GetComponent<RectTransform>();
+            ui_list[3] = GameObject.Find("PromptUI").GetComponent<RectTransform>();
+            ui_list[4] = GameObject.Find("ResultUI").GetComponent<RectTransform>();
 
             // ë¶ˆí•„?š”?•œ ui ë¹„í™œ?„±
             ui_list[2].gameObject.SetActive(false);
+            ui_list[3].gameObject.SetActive(false);
+            ui_list[4].gameObject.SetActive(false);
 
             if (spr_list.Length == 0) spr_list = mg.ImageSet();
 
