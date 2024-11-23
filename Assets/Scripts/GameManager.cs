@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public string concept;
     public string APIResponse = null;
     public int IMGNUM;
+    public List<string> stories = new List<string>();
     private string apiUrl;
     private string apiKey;
     [System.Serializable]
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     public bool is_CoroutineRunning = false;
     public bool is_mgset = false;
     public bool is_catch = false;
+    public bool is_contents = false;
     public bool is_rannum = true;
     [SerializeField]
     private bool _is_ingame = false;
@@ -102,9 +104,27 @@ public class GameManager : MonoBehaviour
     {
         // ?î¨Î≥? Ï¥àÍ∏∞?ôî Î°úÏßÅ
         Debug.Log($"Initializing scene: {scene.name}");
-        mg = GameObject.Find("MinigameManager").GetComponent<minigamemanager>();
+        
+        /*try
+        {
+            // GameObject.Find ªÁøÎ
+            mg = GameObject.Find("MinigameManager").GetComponent<minigamemanager>();
 
-        //StartCoroutine(WaitOneSecond());
+            // null √º≈©
+            if (mg == null)
+            {
+                throw new System.Exception("GameObject not found: NonExistentObject");
+            }
+
+            Debug.Log("Object found: " + mg.name);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error: " + ex.Message);
+        }*/
+
+        if (!is_contents) mg = GameObject.Find("MinigameManager").GetComponent<minigamemanager>();
+
         if (is_ingame == true)
         {
             ui_list = new RectTransform[5];

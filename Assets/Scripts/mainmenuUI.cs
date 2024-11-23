@@ -34,6 +34,12 @@ public class mainmenuUI : MonoBehaviour
         SceneManager.LoadScene("PlayScene");
     }
 
+    public void OnClickStoryButton()
+    {
+        GameManager.Instance.is_contents = true;
+        SceneManager.LoadScene("ScrollScene");
+    }
+
     public void OnClickQuitButton()
     {
 #if UNITY_EDITOR

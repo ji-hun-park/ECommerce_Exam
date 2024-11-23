@@ -19,6 +19,7 @@ public class resultUI : MonoBehaviour
 
     public void OnClickTitleButton()
     {
+        GameManager.Instance.stories.Add(GameManager.Instance.APIResponse);
         GameManager.Instance.APIResponse = null;
         GameManager.Instance.is_ingame = false;
         GameManager.Instance.is_rannum = true;
