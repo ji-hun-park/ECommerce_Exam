@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 552addabb51de7f44b32dc6a9a5a7050
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224922
+  packageName: Melee Attack & Magic Spells Sound Effects and Music Pack
+  packageVersion: 2.0
+  assetPath: Assets/Melee Attack _ Magic Spells Sound Effects and Music Pack/AUDIO/SFX/Magic/Ground/SFX_ATTACK_Magic_Ground_Impact_Frost_1.wav
+  uploadId: 559430
