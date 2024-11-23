@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Game Settings")]
-    public int maxtokens = 100;
+    public int maxtokens = 500;
     public string promptmessage = "다음 인라인 이미지를 보고 프롬프트에 내용을 설정으로 해서 스토리를 만들어 줘! 설정 : ";
     public string concept;
     public string APIResponse = null;
@@ -141,11 +141,11 @@ public class GameManager : MonoBehaviour
                 is_rannum = false;
             }
 
-            if (is_mgset == false)
+            if (is_mgset == true)
             {
-                is_mgset = true;
+                is_mgset = false;
                 Debug.Log("요청 전송");
-                //StartCoroutine(LLMAPIRequest(promptmessage + concept, maxtokens, IMGNUM - 1));
+                StartCoroutine(LLMAPIRequest(promptmessage + concept, maxtokens, IMGNUM - 1));
             }
 
             if (Input.GetKeyDown(KeyCode.Escape))
