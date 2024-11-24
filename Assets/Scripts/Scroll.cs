@@ -9,9 +9,9 @@ public class Scroll : MonoBehaviour
     public GameObject scrollView; // ScrollView 참조
     public Transform content; // Viewport의 Content
     public Sprite imageSprite; // 사용할 이미지 Sprite
-    public Vector2 imageSize = new Vector2(900, 340); // 이미지 크기
+    public Vector2 imageSize = new Vector2(1300, 1200); // 이미지 크기
     public string settextContent; // 텍스트 내용
-    public int fontSize = 20; // 텍스트 크기
+    public int fontSize = 30; // 텍스트 크기
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

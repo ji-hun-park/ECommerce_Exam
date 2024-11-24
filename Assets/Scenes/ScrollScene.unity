@@ -245,10 +245,10 @@ RectTransform:
   - {fileID: 1713855383}
   m_Father: {fileID: 987541027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 700}
+  m_SizeDelta: {x: -600, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200329195
 MonoBehaviour:
@@ -797,9 +797,9 @@ MonoBehaviour:
   scrollView: {fileID: 0}
   content: {fileID: 0}
   imageSprite: {fileID: 0}
-  imageSize: {x: 850, y: 340}
+  imageSize: {x: 1300, y: 1200}
   settextContent: 
-  fontSize: 14
+  fontSize: 30
 --- !u!1 &991892716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -200, y: 150}
+  m_AnchoredPosition: {x: -150, y: 100}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250068509
@@ -1330,7 +1330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0000030037663, y: 0}
   m_SizeDelta: {x: -883, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1731724276

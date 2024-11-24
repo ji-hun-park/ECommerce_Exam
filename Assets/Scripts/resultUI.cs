@@ -14,7 +14,7 @@ public class resultUI : MonoBehaviour
 
     void Update()
     {
-        board.text = GameManager.Instance.APIResponse;
+        if(GameManager.Instance.is_catch) board.text = GameManager.Instance.APIResponse;
     }
 
     public void OnClickTitleButton()
@@ -23,6 +23,7 @@ public class resultUI : MonoBehaviour
         GameManager.Instance.APIResponse = null;
         GameManager.Instance.is_ingame = false;
         GameManager.Instance.is_rannum = true;
+        GameManager.Instance.is_catch = false;
         SceneManager.LoadScene("MainMenuScene");
     }
 }

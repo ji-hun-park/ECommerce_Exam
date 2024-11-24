@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Game Settings")]
-    public int maxtokens = 500;
+    public int maxtokens = 800;
     public string promptmessage = "다음 인라인 이미지를 보고 프롬프트에 내용을 설정으로 해서 스토리를 만들어 줘! 설정 : ";
     public string concept;
     public string APIResponse = null;
@@ -249,7 +249,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Error: " + request.error);
             Debug.LogError("Response: " + request.downloadHandler.text);
-            is_catch = true;
+            is_mgset = true;
         }
     }
 
@@ -270,7 +270,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogError("Could not parse the response.");
-            is_catch = true;
+            is_mgset = true;
         }
     }
 }
